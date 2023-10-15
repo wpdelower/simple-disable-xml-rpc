@@ -41,8 +41,8 @@ function sdxr_dc_load_textdomain() {
 
 function xmlrpc_disabler_menu() {
     add_options_page(
-        'XML-RPC Disabler',
-        'XML-RPC Disabler',
+        __( 'Simple Disable XML-RPC', 'simple-disable-xml-rpc' ),
+        __( 'Simple Disable XML-RPC', 'simple-disable-xml-rpc' ),
         'manage_options',
         'simple-disable-xml-rpc',
         'xmlrpc_disabler_page'
@@ -69,13 +69,13 @@ function xmlrpc_disabler_page() {
 
 function xmlrpc_disabler_init() {
     register_setting('xmlrpc_disabler', 'xmlrpc_enabled');
-    add_settings_section('xmlrpc_disabler_section', 'XML-RPC Settings', 'xmlrpc_disabler_section_callback', 'xmlrpc-disabler');
-    add_settings_field('xmlrpc_enabled', 'Enable XML-RPC', 'xmlrpc_enabled_callback', 'xmlrpc-disabler', 'xmlrpc_disabler_section');
+    add_settings_section('xmlrpc_disabler_section', __('Simple Disable XML-RPC Settings', 'simple-disable-xml-rpc'), 'xmlrpc_disabler_section_callback', 'xmlrpc-disabler');
+    add_settings_field('xmlrpc_enabled', __('Enable XML-RPC', 'simple-disable-xml-rpc'), 'xmlrpc_enabled_callback', 'xmlrpc-disabler', 'xmlrpc_disabler_section');
 }
 add_action('admin_init', 'xmlrpc_disabler_init');
 
 function xmlrpc_disabler_section_callback() {
-    echo 'Enable or disable XML-RPC functionality for the site.';
+    echo __('Enable or disable XML-RPC functionality for the site.', 'simple-disable-xml-rpc');
 }
 
 function xmlrpc_enabled_callback() {
