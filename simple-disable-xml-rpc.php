@@ -12,6 +12,8 @@
  * Plugin URI:    https://www.delowerhossain.com
  * Description:   Simple Disable XML-RPC\" is a user-friendly WordPress plugin that empowers website administrators to easily control and secure their site by enabling or disabling the XML-RPC functionality. With a simple toggle switch, this plugin helps protect your WordPress site from potential XML-RPC-related security threats, enhancing your website\'s overall safety and performance.
  * Version:       1.0.0
+ * Requires at least: 5.7
+ * Requires PHP:  7.2
  * Author:        Delower Hossain
  * Author URI:    https://www.delowerhossain.com
  * Text Domain:   simple-disable-xml-rpc
@@ -19,15 +21,21 @@
  * License:       GPLv2
  * License URI:   https://www.gnu.org/licenses/gpl-2.0.html
  *
- * You should have received a copy of the GNU General Public License
- * along with Simple Disable XML-RPC. If not, see <https://www.gnu.org/licenses/gpl-2.0.html/>.
  */
 
-// Exit if accessed directly.
+// Avoiding Direct File Access
+
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Enable or Disable XML-RPC functionality.
+// Load Plugin Text Domain
 
+function sdxr_dc_load_textdomain() {
+    load_plugin_textdomain( 'simple-disable-xml-rpc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+  }
+  add_action( 'plugins_loaded', 'sdxr_dc_load_textdomain' );
+
+
+// Enable or Disable XML-RPC functionality.
 
 //Create the Settings Page
 
@@ -36,7 +44,7 @@ function xmlrpc_disabler_menu() {
         'XML-RPC Disabler',
         'XML-RPC Disabler',
         'manage_options',
-        'xmlrpc-disabler',
+        'simple-disable-xml-rpc',
         'xmlrpc_disabler_page'
     );
 }
@@ -45,7 +53,7 @@ add_action('admin_menu', 'xmlrpc_disabler_menu');
 function xmlrpc_disabler_page() {
     ?>
     <div class="wrap">
-        <h2>XML-RPC Disabler Settings</h2>
+        <h2>Simple Disable XML-RPC Settings</h2>
         <form method="post" action="options.php">
             <?php
             settings_fields('xmlrpc_disabler');
@@ -85,3 +93,16 @@ function xmlrpc_disabler_save_post_data() {
     }
 }
 add_action('admin_post_save_xmlrpc_settings', 'xmlrpc_disabler_save_post_data');
+
+
+// Simple Disable XML-RPC Option Links
+
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'sdxr_add_action_links' );
+
+function sdxr_add_action_links ( $actions ) {
+   $mylinks = array(
+      '<a href="' . admin_url( 'options-general.php?page=simple-disable-xml-rpc' ) . '">Settings</a>',
+   );
+   $actions = array_merge( $actions, $mylinks );
+   return $actions;
+}
