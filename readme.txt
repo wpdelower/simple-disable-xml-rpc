@@ -1,6 +1,6 @@
 === Simple Disable XML-RPC ===
 Author URI: https://www.delowerhossain.com
-Plugin URI: https://www.delowerhossain.com
+Plugin URI: https://www.delowerhossain.com/plugins/simple-disable-xml-rpc
 Donate link: 
 Contributors: wpdelower
 Tags: xmlrpc, xml, security
