@@ -2,7 +2,7 @@
 /**
  * Simple Disable XML-RPC
  *
- * @package       SIMPLEDISA
+ * @package       SIMDISXMLRPC
  * @author        Delower Hossain
  * @license       gplv2
  * @version       1.0
