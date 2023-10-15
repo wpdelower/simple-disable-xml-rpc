@@ -10,6 +10,7 @@ Requires PHP: 7.2
 Stable tag: 1.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://www.delowerhossain.com/donate
 
 Simple Disable XML-RPC\" is a user-friendly WordPress plugin that empowers website administrators to easily control and secure their site by enabling or disabling the XML-RPC functionality. With a simple toggle switch, this plugin helps protect your WordPress site from potential XML-RPC-related security threats, enhancing your website\'s overall safety and performance.
 
@@ -63,6 +64,9 @@ See the screenshots for examples of what these tools will return when the plugin
 4. Click on `Activate plugin`
 5. Click Settings or go to Settings > Simple Disable XML-RPC
 6. Check the box
+
+ == Screenshots ==
+ 1. An example of the settings page interface
 
 == Changelog ==
 
