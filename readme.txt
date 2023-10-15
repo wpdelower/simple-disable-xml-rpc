@@ -3,11 +3,11 @@ Author URI: https://www.delowerhossain.com
 Plugin URI: https://www.delowerhossain.com
 Donate link: 
 Contributors: wpdelower
-Tags: 
-Requires at least: 
-Tested up to: 
-Requires PHP: 
-Stable tag: 1.0.0
+Tags: xmlrpc, xml, security
+Requires at least: 5.7
+Tested up to: 6.3
+Requires PHP: 7.2
+Stable tag: 1.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,37 +15,44 @@ Simple Disable XML-RPC\" is a user-friendly WordPress plugin that empowers websi
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Simple Disable XML-RPC" is a powerful yet user-friendly WordPress plugin designed to give website administrators complete control over the XML-RPC functionality of their WordPress site. XML-RPC is a feature that enables remote communication with your website, allowing external applications and services to interact with your WordPress installation. While XML-RPC can be useful, it can also pose security risks if not properly managed. This plugin simplifies the process of managing XML-RPC, enhancing your site's security and performance with ease.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+== Key Features: ==
 
-A few notes about the sections above:
+** Effortless XML-RPC Control: ** With "Simple Disable XML-RPC," you can easily enable or disable XML-RPC functionality on your WordPress site. The plugin provides a straightforward toggle switch, allowing you to make quick adjustments as needed.
 
-*   "Contributors" is a comma separated list of wordpress.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+** Enhanced Website Security: ** By disabling XML-RPC when it's not needed, you can significantly reduce the potential attack surface for malicious actors. This helps safeguard your website against various XML-RPC-related security threats.
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+** Improved Performance: ** When XML-RPC is disabled, it can lead to improved website performance and resource optimization. This is particularly beneficial for sites where remote connectivity features are unnecessary.
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+** User-Friendly Interface: ** The plugin's intuitive user interface ensures that even those with limited technical expertise can easily manage XML-RPC settings without the need for complex configurations or coding.
+
+** Zero Coding Required: ** You don't need to be a coding expert to control XML-RPC. The plugin abstracts the technical details, making it accessible to all WordPress users.
+
+** Real-time Changes: ** Any changes to XML-RPC settings take effect in real-time, ensuring that your site's security can be adjusted promptly to meet your requirements.
+
+** Compatibility: ** "Simple Disable XML-RPC" is designed to work seamlessly with various WordPress themes and plugins, ensuring that it won't disrupt your website's core functionality.
+
+** Regular Updates: ** The plugin is actively maintained and updated to ensure compatibility with the latest versions of WordPress and to address any potential issues.
+
+** Customer Support: ** In case you encounter any difficulties or have questions, the plugin's support team is available to assist you, providing prompt and helpful responses.
 
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Is there an admin interface for this plugin? =
 
-An answer to that question.
+Yes. Please go to Settings > Simple Disable XML-RPC
+
+= How do I know if the plugin is working? =
+
+There are a few easy methods for checking if XML-RPC is off:
+
+1. Try using an XML-RPC WordPress client, like the official WordPress mobile apps. The WordPress mobile app should tell you that "XML-RPC services are disabled on this site" if the plugin is activated.
+2. Use the curl command to send an XML-RPC request to your site. If the response contains "XML-RPC services are disabled on this site" then the plugin is working properly and WordPress will not send data back to XML-RPC requests.
+3. Try the XML-RPC Validator, written by Danilo Ercoli of the Automattic Mobile Team - the tool is available at [https://xmlrpc-check.hostpress.me/](https://xmlrpc-check.hostpress.me/). Information and source code for the tool are available on GitHub at [https://github.com/daniloercoli/WordPress-XML-RPC-Validator](https://github.com/daniloercoli/WordPress-XML-RPC-Validator). Keep in mind that you want the validator to fail and tell you that XML-RPC services are disabled.
+
+See the screenshots for examples of what these tools will return when the plugin is enabled.
 
 
 == Installation ==
@@ -54,8 +61,15 @@ An answer to that question.
 2. Click on the button `Add new`
 3. Search for `Simple Disable XML-RPC` and click 'Install Now' or click on the `upload` link to upload `simple-disable-xml-rpc.zip`
 4. Click on `Activate plugin`
+5. Click Settings or go to Settings > Simple Disable XML-RPC
+6. Check the box
 
 == Changelog ==
 
-= 1.0.0: October 15, 2023 =
-* Birthday of Simple Disable XML-RPC
+= 1.0 =
+* Initial Release
+
+== Upgrade Notice ==
+
+= 1.0 =
+* Initial Release
