@@ -5,13 +5,13 @@
  * @package       SIMPLEDISA
  * @author        Delower Hossain
  * @license       gplv2
- * @version       1.0.0
+ * @version       1.0
  *
  * @wordpress-plugin
  * Plugin Name:   Simple Disable XML-RPC
  * Plugin URI:    https://www.delowerhossain.com
- * Description:   Simple Disable XML-RPC\" is a user-friendly WordPress plugin that empowers website administrators to easily control and secure their site by enabling or disabling the XML-RPC functionality. With a simple toggle switch, this plugin helps protect your WordPress site from potential XML-RPC-related security threats, enhancing your website\'s overall safety and performance.
- * Version:       1.0.0
+ * Description:   Simple Disable XML-RPC is a user-friendly WordPress plugin that empowers website administrators to easily control and secure their site by enabling or disabling the XML-RPC functionality. With a simple toggle switch, this plugin helps protect your WordPress site from potential XML-RPC-related security threats, enhancing your website's overall safety and performance.
+ * Version:       1.0
  * Requires at least: 5.7
  * Requires PHP:  7.2
  * Author:        Delower Hossain
